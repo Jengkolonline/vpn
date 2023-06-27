@@ -155,6 +155,18 @@ chmod +x xp
 chmod +x acs-set
 chmod +x sshws
 
+chmod +x bot
+chmod +x add-bot-notif
+chmod +x del-bot-notif
+chmod +x menu-bot
+
+chmod +x menu-sstp
+chmod +x menu-l2tp
+chmod +x menu-pptp
+chmod +x menu-ssr
+chmod +x menu-ssl
+chmod +x menu-wg
+
 # vmess
 wget -O add-ws "https://raw.githubusercontent.com/Jengkolonline/tunneljengkolonline/main/xray/add-ws.sh" && chmod +x add-ws
 wget -O trialvmess "https://raw.githubusercontent.com/Jengkolonline/tunneljengkolonline/main/xray/trialvmess.sh" && chmod +x trialvmess
