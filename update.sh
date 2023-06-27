@@ -98,6 +98,20 @@ wget -O acs-set "https://raw.githubusercontent.com/Jengkolonline/tunneljengkolon
 
 wget -O sshws "https://raw.githubusercontent.com/Jengkolonline/tunneljengkolonline/main/ssh/sshws.sh"
 
+#bot
+wget -O bot "https://raw.githubusercontent.com/Jengkolonline/bot/main/bot.sh"
+wget -O add-bot-notif "https://raw.githubusercontent.com/Jengkolonline/bot/main/add-bot-notif.sh"
+wget -O del-bot-notif "https://raw.githubusercontent.com/Jengkolonline/bot/main/del-bot-notif.sh"
+wget -O menu-bot "https://raw.githubusercontent.com/Jengkolonline/bot/main/menu-bot.sh"
+
+#menu tambahan
+wget -O menu-sstp "https://raw.githubusercontent.com/Jengkolonline/sstp/main/menu-sstp.sh"
+wget -O menu-l2tp "https://raw.githubusercontent.com/Jengkolonline/ipsec/main/menu-l2tp.sh"
+wget -O menu-pptp "https://raw.githubusercontent.com/Jengkolonline/ipsec/main/menu-pptp.sh"
+wget -O menu-ssr "https://raw.githubusercontent.com/Jengkolonline/ssr/main/menu-ssr.sh"
+wget -O menu-ssl "https://raw.githubusercontent.com/Jengkolonline/shadowsocks-libev/main/menu-ssl.sh"
+wget -O menu-wg "https://raw.githubusercontent.com/Jengkolonline/wireguard/main/menu-wg.sh"
+
 chmod +x menu
 chmod +x menu-vmess
 chmod +x menu-vless
