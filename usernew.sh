@@ -80,16 +80,16 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "SSH-WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN TCP : $tcp" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN UDP : $udp" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN SSL : $ossl" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN TCP : 1194" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN UDP : 2200" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN SSL : 110" | tee -a /etc/log-create-user.log
 echo -e "Prot Squid  : $sqd" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e " 🔰Account OpenVPN🔰 "
-echo -e "OpenVPN TCP : $tcp http://$domen:81/client-tcp-$tcp.ovpn"
-echo -e "OpenVPN UDP : $udp http://$domen:81/client-udp-$udp.ovpn"
-echo -e "OpenVPN SSL : $ossl http://$domen:81/client-tcp-ssl.ovpn"
+echo -e "OpenVPN TCP : 1194 http://$IP:81/client-tcp-1194.ovpn"
+echo -e "OpenVPN UDP : 2200 http://$IP:81/client-udp-2200.ovpn"
+echo -e "OpenVPN SSL : 110 http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e " 🔰Account UDP🔰 "
 echo -e "$domen:54-65535@$Login:$Pass"
@@ -121,16 +121,16 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "SSH-WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN TCP : $tcp" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN UDP : $udp" | tee -a /etc/log-create-user.log
-echo -e "OpenVPN SSL : $ossl" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN TCP : 1194" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN UDP : 2200" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN SSL : 110" | tee -a /etc/log-create-user.log
 echo -e "Prot Squid  : $sqd" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-user.log
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e " 🔰Account OpenVPN🔰 "
-echo -e "OpenVPN TCP : $tcp http://$domen:81/client-tcp-$tcp.ovpn"
-echo -e "OpenVPN UDP : $udp http://$domen:81/client-udp-$udp.ovpn"
-echo -e "OpenVPN SSL : $ossl http://$domen:81/client-tcp-ssl.ovpn"
+echo -e "OpenVPN TCP : 1194 http://$IP:81/client-tcp-1194.ovpn"
+echo -e "OpenVPN UDP : 2200 http://$IP:81/client-udp-2200.ovpn"
+echo -e "OpenVPN SSL : 110 http://$IP:81/client-tcp-ssl.ovpn"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e " 🔰Account UDP🔰 "
 echo -e "$domen:54-65535@$Login:$Pass"
