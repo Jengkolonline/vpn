@@ -45,7 +45,9 @@ read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
 
 IP=$(curl -sS ifconfig.me);
-ossl=`cat /root/log-install.txt | grep -w "OpenVPN" | cut -f2 -d: | awk '{print $6}'`
+tcp=`cat /root/log-install.txt | grep -w "OpenVPN TCP" | cut -f2 -d: | awk '{print $6}'`
+udp=`cat /root/log-install.txt | grep -w "OpenVPN UDP" | cut -f2 -d: | awk '{print $6}'`
+ossl=`cat /root/log-install.txt | grep -w "OpenVPN SSL" | cut -f2 -d: | awk '{print $6}'`
 opensh=`cat /root/log-install.txt | grep -w "OpenSSH" | cut -f2 -d: | awk '{print $1}'`
 db=`cat /root/log-install.txt | grep -w "Dropbear" | cut -f2 -d: | awk '{print $1,$2}'`
 ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
@@ -78,8 +80,16 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "SSH-WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN TCP : $tcp" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN UDP : $udp" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN SSL : $ossl" | tee -a /etc/log-create-user.log
 echo -e "Prot Squid  : $sqd" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e " 🔰Account OpenVPN🔰 "
+echo -e "OpenVPN TCP : $tcp http://$MYIP:81/client-tcp-$tcp.ovpn"
+echo -e "OpenVPN UDP : $udp http://$MYIP:81/client-udp-$udp.ovpn"
+echo -e "OpenVPN SSL : $ossl http://$MYIP:81/client-tcp-ssl.ovpn"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e " 🔰Account UDP🔰 "
 echo -e "$domain:54-65535@$LOGIN:$PASSWD"
@@ -109,8 +119,16 @@ echo -e "OpenSSH     : $opensh" | tee -a /etc/log-create-user.log
 echo -e "SSH-WS      : $portsshws" | tee -a /etc/log-create-user.log
 echo -e "SSH-SSL-WS  : $wsssl" | tee -a /etc/log-create-user.log
 echo -e "SSL/TLS     : $ssl" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN TCP : $tcp" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN UDP : $udp" | tee -a /etc/log-create-user.log
+echo -e "OpenVPN SSL : $ossl" | tee -a /etc/log-create-user.log
 echo -e "Prot Squid  : $sqd" | tee -a /etc/log-create-user.log
 echo -e "UDPGW       : 7100-7300" | tee -a /etc/log-create-user.log
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
+echo -e " 🔰Account OpenVPN🔰 "
+echo -e "OpenVPN TCP : $tcp http://$MYIP:81/client-tcp-$tcp.ovpn"
+echo -e "OpenVPN UDP : $udp http://$MYIP:81/client-udp-$udp.ovpn"
+echo -e "OpenVPN SSL : $ossl http://$MYIP:81/client-tcp-ssl.ovpn"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e " 🔰Account UDP🔰 "
 echo -e "$domain:54-65535@$LOGIN:$PASSWD"
