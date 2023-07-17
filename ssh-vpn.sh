@@ -155,7 +155,6 @@ rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/Jengkolonline/tunneljengkolonline/main/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
-mkdir -p /var/www/html
 wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/Jengkolonline/vpn/main/vps.conf"
 /etc/init.d/nginx restart
 
