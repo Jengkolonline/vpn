@@ -152,7 +152,7 @@ cd
 # install squid
 cd
 apt -y install squid3
-wget -O /etc/squid/squid.conf "https://${akbarvpn}/squid3.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Jengkolonline/vpn/main/squid3.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
@@ -208,7 +208,7 @@ rm -rf /root/vnstat-2.6
 
 # install stunnel 5 
 cd /root/
-wget -q -O stunnel5.zip "https://${akbarvpnnnn}/stunnel5.zip"
+wget -q -O stunnel5.zip "https://raw.githubusercontent.com/Jengkolonline/vpn/main/stunnel5.zip"
 unzip -o stunnel5.zip
 cd /root/stunnel
 chmod +x configure
@@ -267,7 +267,7 @@ WantedBy=multi-user.target
 END
 
 # Service Stunnel5 /etc/init.d/stunnel5
-wget -q -O /etc/init.d/stunnel5 "https://${akbarvpnnnn}/stunnel5.init"
+wget -q -O /etc/init.d/stunnel5 "https://raw.githubusercontent.com/Jengkolonline/vpn/main/stunnel5.init"
 
 # Ubah Izin Akses
 chmod 600 /etc/stunnel5/stunnel5.pem
