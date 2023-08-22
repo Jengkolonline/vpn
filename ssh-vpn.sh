@@ -473,7 +473,7 @@ echo -e "[ ${green}ok${NC} ] Restart All service SSH & OVPN"
 /etc/init.d/openvpn restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restart cron"
-/etc/init.d/nginx restart >/dev/null 2>&1
+/etc/init.d/openvpn restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting ssh "
 /etc/init.d/ssh restart >/dev/null 2>&1
