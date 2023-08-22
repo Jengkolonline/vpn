@@ -472,6 +472,9 @@ sleep 1
 echo -e "[ ${green}ok${NC} ] Restart All service SSH & OVPN"
 /etc/init.d/openvpn restart >/dev/null 2>&1
 sleep 1
+echo -e "[ ${green}ok${NC} ] Restart cron"
+/etc/init.d/cron restart >/dev/null 2>&1
+sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting ssh "
 /etc/init.d/ssh restart >/dev/null 2>&1
 sleep 1
@@ -482,7 +485,7 @@ echo -e "[ ${green}ok${NC} ] Restarting fail2ban "
 /etc/init.d/fail2ban restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting SSLH "
-/etc/init.d/fail2ban restart >/dev/null 2>&1
+/etc/init.d/sslh restart >/dev/null 2>&1
 sleep 1
 echo -e "[ ${green}ok${NC} ] Restarting stunnel5 "
 /etc/init.d/stunnel5 restart >/dev/null 2>&1
