@@ -148,6 +148,14 @@ echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/ssh restart
 /etc/init.d/dropbear restart
+clear
+# install squid Proxy
+cd
+apt -y install squid3
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Jengkolonline/vpn/main/squid3.conf"
+sed -i $MYIP2 /etc/squid/squid.conf
+clear
+echo "Successfull Installing Squid Proxy"
 cd
 apt install stunnel4 -y
 cat > /etc/stunnel/stunnel.conf <<-END
